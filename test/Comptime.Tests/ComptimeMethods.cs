@@ -7,10 +7,10 @@ namespace Comptime.Tests;
 public static partial class ComptimeMethods
 {
     /// <summary>
-    /// Returns an array of prime numbers computed at compile time.
+    /// Returns a list of prime numbers computed at compile time.
     /// </summary>
     [Comptime]
-    public static int[] GetPrimeNumbers()
+    public static IReadOnlyList<int> GetPrimeNumbers()
     {
         var primes = new List<int>();
         for (int i = 2; i <= 30; i++)
@@ -20,7 +20,7 @@ public static partial class ComptimeMethods
                 primes.Add(i);
             }
         }
-        return primes.ToArray();
+        return primes;
     }
 
     private static bool IsPrime(int n)
@@ -72,10 +72,10 @@ public static partial class ComptimeMethods
     }
 
     /// <summary>
-    /// Returns an array of strings computed at compile time.
+    /// Returns a list of strings computed at compile time.
     /// </summary>
     [Comptime]
-    public static string[] GetDaysOfWeek()
+    public static IReadOnlyList<string> GetDaysOfWeek()
     {
         return new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
     }
@@ -118,10 +118,10 @@ public static partial class ComptimeMethods
     }
 
     /// <summary>
-    /// Returns an array with special characters in strings.
+    /// Returns a list with special characters in strings.
     /// </summary>
     [Comptime]
-    public static string[] GetSpecialStrings()
+    public static IReadOnlyList<string> GetSpecialStrings()
     {
         return new[]
         {
@@ -134,11 +134,90 @@ public static partial class ComptimeMethods
     }
 
     /// <summary>
-    /// Returns an array of chars.
+    /// Returns a list of chars.
     /// </summary>
     [Comptime]
-    public static char[] GetVowels()
+    public static IReadOnlyList<char> GetVowels()
     {
         return new[] { 'a', 'e', 'i', 'o', 'u' };
+    }
+
+    /// <summary>
+    /// Returns the factorial of n computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static long Factorial(int n)
+    {
+        if (n <= 1) return 1;
+        long result = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            result *= i;
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Returns the nth Fibonacci number computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static int Fibonacci(int n)
+    {
+        if (n <= 0) return 0;
+        if (n == 1) return 1;
+        
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        return b;
+    }
+
+    /// <summary>
+    /// Returns a greeting message with the given name computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static string Greet(string name)
+    {
+        return $"Hello, {name}!";
+    }
+
+    /// <summary>
+    /// Returns the sum of two numbers computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    /// <summary>
+    /// Returns the sum of all numbers in a list computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static int SumList(IReadOnlyList<int> numbers)
+    {
+        return numbers.Sum();
+    }
+
+    /// <summary>
+    /// Returns the count of items in a collection computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static int CountItems<T>(IReadOnlyList<T> items)
+    {
+        return items.Count;
+    }
+
+    /// <summary>
+    /// Returns the concatenation of strings computed at compile time.
+    /// </summary>
+    [Comptime]
+    public static string JoinStrings(IReadOnlyList<string> strings, string separator)
+    {
+        return string.Join(separator, strings);
     }
 }

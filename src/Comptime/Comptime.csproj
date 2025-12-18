@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Source generators typically target netstandard2.0 to work with multiple compiler hosts -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+    <LangVersion>Latest</LangVersion>
+    <AnalyzerLanguage>cs</AnalyzerLanguage>
+    <IsRoslynAnalyzer>true</IsRoslynAnalyzer>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <IsRoslynComponent>true</IsRoslynComponent>
+    <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+    <DefineConstants>$(DefineConstants);SOURCE_GENERATOR</DefineConstants>
+    <!-- Suppress experimental warning for interceptor APIs -->
+    <NoWarn>$(NoWarn);RSEXPERIMENTAL002;RS2007;RS2008</NoWarn>
+    
+    <!-- Package properties -->
+    <PackageId>Comptime</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Your Name</Authors>
+    <Description>A source generator that executes methods at compile time and serializes results to C# code.</Description>
+    <PackageTags>source-generator;compile-time;comptime;roslyn</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

